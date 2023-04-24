@@ -1,7 +1,9 @@
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import './App.css';
+import './App.scss';
 import TaskList from './components/TaskList';
+
+export const API_URL = import.meta.env.VITE_API_URL;
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -12,7 +14,13 @@ function App() {
         <div className='task-container'>
           <TaskList />
         </div>
-        <ToastContainer />
+        <ToastContainer //
+          position='top-center'
+          theme='dark'
+          autoClose={3000}
+          transition={Zoom}
+          pauseOnHover
+        />
       </div>
     </>
   );

@@ -4,7 +4,7 @@ const TaskForm = ({ createTask, name, handleInputChange }) => {
       <form className='task-form' onSubmit={createTask}>
         <input //
           type='text'
-          placeholder='New Task'
+          placeholder=''
           name='name'
           value={name}
           onChange={handleInputChange}
